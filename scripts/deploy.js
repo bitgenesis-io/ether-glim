@@ -2,7 +2,7 @@ const hre = require("hardhat");
 
 async function main() {
 	// Deploying GlimToken Contract
-	const GlimToken = await hre.ethers.getContractFactory("GLDToken");
+	const GlimToken = await hre.ethers.getContractFactory("GlimToken");
 	const glimToken = await GlimToken.deploy();
 	await glimToken.deployed();
 	console.log(`GlimToken deployed to: ${glimToken.address}`);
